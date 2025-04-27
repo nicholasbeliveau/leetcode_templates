@@ -20,3 +20,34 @@ public int leftAndRight(int[] arr) {
 
   return ans;
 }
+
+/**
+  Two pointers: two inputs, exhaust both
+
+  For looping through two arrays, both with their own control.
+ */
+
+public int twoArraysTwoInputs(int[] arr1, int[] arr2) {
+  int i = 0, j = 0, ans = 0;
+
+  while (i < arr1.length && j < arr2.length) {
+      // do some logic here
+      if (CONDITION) {
+          i++;
+      } else {
+          j++;
+      }
+  }
+
+  while (i < arr1.length) {
+      // do logic
+      i++;
+  }
+
+  while (j < arr2.length) {
+      // do logic
+      j++;
+  }
+
+  return ans;
+}
