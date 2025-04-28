@@ -56,3 +56,23 @@ let twoArraysTwoInputs = (arr1, arr2) => {
 
   return ans;
 }
+
+/**
+ * Count number of occurances of a subarray wihtin an array
+ * @param {*} arr 
+ * @param {*} k 
+ * @returns Occurances of a subarray
+ */
+let subarray = (arr, k) => {
+    let counts = new Map();
+    counts.set(0, 1);
+    let ans = 0, curr = 0;
+
+    for (const num of arr) {
+        // do logic to change curr
+        ans += counts.get(curr - k) || 0;
+        counts.set(curr, (counts.get(curr) || 0) + 1);
+    }
+
+    return ans;
+}
